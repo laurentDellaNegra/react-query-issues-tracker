@@ -1,14 +1,4 @@
-<h1 align="center">
-  <a href="https://ui.dev">
-    <img
-      src="https://ui.dev/images/ambitious-banner-dark.jpg"
-      alt="ui.dev banner" width="600" />
-  </a>
-  <br />
-</h1>
-
-<h3 align="center">React Query Course PRoject - <a href="https://react-query-issue-tracker.ui.dev">Issue Tracker</a></h3>
-
+# React Query Issues Tracker
 ### Info
 
 This is the repository for [ui.dev](https://ui.dev)'s "React Query" course project.
