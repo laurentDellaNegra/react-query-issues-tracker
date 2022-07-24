@@ -1,10 +1,5 @@
-const possibleStatus = [
-  { id: "backlog", label: "Backlog" },
-  { id: "todo", label: "To-do" },
-  { id: "inProgress", label: "In Progress" },
-  { id: "done", label: "Done" },
-  { id: "cancelled", label: "Cancelled" },
-];
+import { possibleStatus } from "../helpers/defaultData";
+
 export function StatusSelect({ value, onChange }) {
   return (
     <select value={value} onChange={onChange} className="status-select">
