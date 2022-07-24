@@ -1,4 +1,4 @@
-import { useQuery, useQueryErrorResetBoundary } from "react-query";
+import { useQuery, useQueryErrorResetBoundary } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { relativeDate } from "../helpers/relativeDate";
 import { useUserData } from "../helpers/useUserData";
