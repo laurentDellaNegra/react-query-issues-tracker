@@ -21,7 +21,7 @@ export function IssueHeader({
       <div>
         <span
           className={
-            status === "done" || status === "cancelled" ? "close" : "open"
+            status === "done" || status === "cancelled" ? "closed" : "open"
           }
         >
           {status === "done" || status === "cancelled" ? (
