@@ -1,22 +1,19 @@
 import { useQuery, useQueryErrorResetBoundary } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
+import fetchWithError from "../helpers/fetchWithError";
 import { relativeDate } from "../helpers/relativeDate";
 import { useUserData } from "../helpers/useUserData";
 import { IssueHeader } from "./IssueHeader";
 
 function useIssueData(issueNumber) {
   return useQuery(["issues", issueNumber], ({ signal }) => {
-    return fetch(`/api/issues/${issueNumber}`, { signal }).then((res) =>
-      res.json()
-    );
+    return fetchWithError(`/api/issues/${issueNumber}`, { signal });
   });
 }
 
 function useIssueComments(issueNumber) {
   return useQuery(["issues", issueNumber, "comments"], ({ signal }) => {
-    return fetch(`/api/issues/${issueNumber}/comments`, { signal }).then(
-      (res) => res.json()
-    );
+    return fetchWithError(`/api/issues/${issueNumber}/comments`, { signal });
   });
 }
 

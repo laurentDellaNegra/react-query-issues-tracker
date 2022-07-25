@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
+import fetchWithError from "./fetchWithError";
 
 export function useUserData(userId) {
   const usersData = useQuery(
     ["users", userId],
-    ({ signal }) =>
-      fetch(`/api/users/${userId}`, { signal }).then((res) => res.json()),
+    ({ signal }) => fetchWithError(`/api/users/${userId}`, { signal }),
     { staleTime: 1000 * 60 * 5 }
   );
 
