@@ -6,7 +6,7 @@ export default function IssueStatus({ status, issueNumber }) {
   const queryClient = useQueryClient();
   const setStatus = useMutation(
     (newStatus) => {
-      fetchWithError(`/api/issues/${issueNumber}`, {
+      return fetchWithError(`/api/issues/${issueNumber}`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
